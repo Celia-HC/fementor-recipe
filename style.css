@@ -72,6 +72,7 @@ body {
   font-family: "Young Serif", sans-serif;
   font-size: 1.75rem;
   margin-bottom: 24px;
+  font-weight: 500;
 }
 .recipe--bold {
   font-weight: 600;
