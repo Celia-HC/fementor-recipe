@@ -76,6 +76,7 @@ font-family: theme.$Young-Serif, sans-serif;
         font-family: theme.$Young-Serif;
         font-size: 1.75rem;
         margin-bottom: 24px;
+        font-weight: 500;
     }
     &--bold {
         font-weight: 600;
@@ -103,7 +104,6 @@ font-family: theme.$Young-Serif, sans-serif;
         }
         tr:last-child {
             border-bottom: none;
-
     }
     &__nutrition-number {
         font-weight: 600;
