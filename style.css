@@ -1,0 +1,121 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #f3e6d8;
+  font-family: "Young Serif", sans-serif, sans-serif;
+}
+
+.container {
+  min-width: 375px;
+  max-width: 736px;
+  background: #ffffff;
+  color: #5f574e;
+  font-family: "Outfit", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 150%;
+  margin: 0 auto;
+}
+.container__img {
+  width: 100%;
+}
+
+.recipe {
+  padding: 40px 32px;
+}
+.recipe ul, .recipe ol {
+  display: grid;
+  gap: 0.75rem;
+  margin-left: 1rem;
+  padding: 0 0.5rem;
+}
+.recipe ul li, .recipe ol li {
+  padding: 0 0 0 1rem;
+}
+.recipe li::marker {
+  color: #7b284f;
+}
+.recipe ol li::marker {
+  font-weight: 600;
+  color: #854632;
+}
+.recipe__title {
+  color: #302d2c;
+  font-family: "Young Serif", sans-serif;
+  font-size: 2.25rem;
+  line-height: 100%;
+  margin-bottom: 24px;
+}
+.recipe__description {
+  line-height: 150%;
+}
+.recipe__preparation-time {
+  background-color: #fff5fa;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 32px 0;
+}
+.recipe__preparation-time-subtitle {
+  color: #7b284f;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.recipe__subtitle {
+  color: #854632;
+  font-family: "Young Serif", sans-serif;
+  font-size: 1.75rem;
+  margin-bottom: 24px;
+}
+.recipe--bold {
+  font-weight: 600;
+}
+.recipe__ingredients, .recipe__instructions {
+  border-bottom: 0.5px solid #f3e6d8;
+  padding-bottom: 32px;
+  margin-bottom: 32px;
+}
+.recipe__nutrition-table {
+  width: 100%;
+  margin-top: 24px;
+  font-size: 1rem;
+}
+.recipe__nutrition-table tr {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 12px 0;
+  border-bottom: 0.5px solid #f3e6d8;
+}
+.recipe__nutrition-table td:first-child {
+  padding-left: 32px;
+}
+.recipe tr:last-child {
+  border-bottom: none;
+}
+.recipe__nutrition-number {
+  font-weight: 600;
+  color: #854632;
+}
+
+@media screen and (min-width: 736px) {
+  .container {
+    max-width: 736px;
+    margin: clamp(50px, 12vh, 120px) auto;
+    border-radius: 24px;
+    padding: 40px;
+  }
+  .container__img {
+    border-radius: 12px;
+    margin-bottom: 40px;
+  }
+  .recipe {
+    padding: 0;
+  }
+}/*# sourceMappingURL=style.css.map */

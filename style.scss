@@ -1,0 +1,128 @@
+@use "./theme";
+
+*,
+::before,
+::after {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+body {
+min-height: 100vh;
+background: theme.$Eggshell;
+font-family: theme.$Young-Serif, sans-serif;
+}
+
+.container {
+    min-width: 375px;
+    max-width: 736px;
+    background: theme.$White;
+    color: theme.$Wenge-Brown;
+    font-family: theme.$Outfit, sans-serif;
+    font-size: 1rem;
+    line-height: 150%;
+    margin: 0 auto;
+
+    &__img {
+        width: 100%;
+    }
+}
+
+.recipe {
+    padding: 40px 32px;
+
+    ul, ol {
+        display: grid;
+        gap: .75rem;
+        margin-left: 1rem;
+        padding: 0 .5rem;
+        li {
+            padding: 0 0 0 1rem;
+        }
+    }
+    li::marker {
+        color: theme.$Dark-Raspberry;
+        
+    }   
+    ol li::marker {
+        font-weight: 600;
+        color: theme.$Nutmeg;
+    }
+    &__title {
+        color: theme.$Dark-Charcoal;
+        font-family: theme.$Young-Serif;
+        font-size: calc(36rem/16);
+        line-height: 100%;
+        margin-bottom: 24px;
+    }
+    &__description {
+        line-height: 150%;
+    }
+    &__preparation-time {
+        background-color: theme.$Rose-White;
+        border-radius: 12px;
+        padding: 24px;
+        margin: 32px 0;
+    }
+    &__preparation-time-subtitle {
+        color: theme.$Dark-Raspberry;
+        font-size: calc(20rem/16);
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+    &__subtitle {
+        color: theme.$Nutmeg;
+        font-family: theme.$Young-Serif;
+        font-size: 1.75rem;
+        margin-bottom: 24px;
+    }
+    &--bold {
+        font-weight: 600;
+    }
+    &__ingredients, 
+    &__instructions {
+        border-bottom: 0.5px solid theme.$Eggshell;
+        padding-bottom: 32px;
+        margin-bottom: 32px;
+    }
+    &__nutrition-table {
+        width: 100%;
+        margin-top: 24px;
+        font-size: 1rem;
+        tr {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            padding: 12px 0;
+            border-bottom: 0.5px solid theme.$Eggshell;
+            }
+            td:first-child {
+                padding-left: 32px;
+            }
+        }
+        tr:last-child {
+            border-bottom: none;
+
+    }
+    &__nutrition-number {
+        font-weight: 600;
+        color: theme.$Nutmeg;
+    }
+}
+
+@media screen and (min-width : 736px) {
+    .container {
+        max-width: 736px;
+        margin: clamp(50px, 12vh, 120px) auto;
+        border-radius: 24px;
+        padding: 40px;
+    &__img {
+        border-radius: 12px;
+        margin-bottom: 40px;
+    }
+    }
+    .recipe {
+        padding: 0;
+    }
+}
